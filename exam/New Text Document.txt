@@ -1,0 +1,23 @@
+import java.awt.*;
+import java.awt.event.*;
+class democbox extends Frame implements ItemListener
+{
+ Checkbox c1;
+ democbox()
+ {
+  c1=new Checkbox("pink");
+  c1.addItemListener(this);
+  add(c1);
+  setSize(400,400);
+  setVisible(true);
+  setLayout(new FlowLayout());
+ }
+ public void itemStateChanged(ItemEvent ie)
+ {
+  setBackground(Color.pink);
+ }
+ public static void main(String args[])
+ {
+  democbox d=new democbox();
+ }
+}

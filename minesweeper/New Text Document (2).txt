@@ -1,0 +1,58 @@
+void play(int tt)
+ {
+  int ox=tt%10;
+  int oy=tt/10;
+  int tx=ox;
+  int ty=oy;
+  play2(tt);
+  while(bomb[ty][tx]==0 && ty>=0)
+  {
+   ty--;
+   if(ty==-1)
+   break;
+   play2(ty*10+tx);
+  }
+  if(ty>=0)
+  if(bomb[ty][tx]!=-1)
+  play2(ty*10+tx);
+  ty=ox;
+  while(bomb[ty][tx]==0 && ty<10)
+  {
+   ty++;
+   if(ty==10)
+   break;
+   play2(ty*10+tx);
+  }
+  if(ty<10)
+  if(bomb[ty][tx]!=-1)
+  play2(ty*10+tx);
+  ty=ox;
+ }
+ void play2(int p)
+ {
+  int ty=p/10;
+  int ox=p%10;
+  int tx=ox;
+   while(bomb[ty][tx]==0 && tx<10)
+   {
+    b[ty][tx].setVisible(false);
+    tx++;
+    if(tx==10)
+    break;
+   }
+   if(tx<10)
+   if(bomb[ty][tx]!=-1)
+   b[ty][tx].setVisible(false);
+   tx=ox;
+   while(bomb[ty][tx]==0 && tx>=0)
+   {
+    b[ty][tx].setVisible(false);
+    tx--;
+    if(tx==-1)
+    break;
+   }
+   if(tx>=0)
+   if(bomb[ty][tx]!=-1)
+   b[ty][tx].setVisible(false);
+   tx=ox;
+ }

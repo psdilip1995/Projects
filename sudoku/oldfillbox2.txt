@@ -1,0 +1,75 @@
+/*public void fillbox2(){
+  int count=0;
+  int []temp=new int[3];
+  Collections.shuffle(al);
+  System.out.println(al);
+  ArrayList <Integer>tal=new ArrayList<Integer>(al);
+  System.out.println(tal);
+  for(int i=0;i<9;i++)
+  {
+   int j=0;
+   for(j=0;j<3;j++)
+   if(tal.get(i)==box[0][0][j])
+   break;
+   if(j==3)
+   {
+    box[1][0][count]=tal.get(i);
+	temp[count++]=i;
+   }
+   if(count==3)
+   break;
+  }
+  for(int i=0;i<3;i++)
+  tal.remove(temp[i]);
+  System.out.println(tal);
+  count=0;
+  ArrayList <Integer>tal2=new ArrayList<Integer>();
+  for(int i=0;i<3;i++)
+  {
+   int t=tal.indexOf(box[0][2][i]);
+   if(t!=-1)
+   {
+    tal2.add(tal.get(i));
+	tal.remove(i);
+   }
+  }
+  System.out.println(tal.size());
+  int t=tal.size();
+  for(int i=0;i<t;i++)
+  {
+   tal2.add(tal.get(i));
+  }
+  System.out.println("size : "+tal.size());
+  for(int i=0;i<6;i++)
+  {
+		int j=0;
+		for(j=0;j<3;j++)
+		 if(tal2.get(i)==box[0][1][j])
+		  break;
+		if(j==3)
+		{
+		 box[1][1][count]=tal2.get(i);
+		 temp[count++]=i;
+		}
+		if(count==3)
+		 break;
+  }
+  for(int i=0;i<3;i++)
+  tal2.remove(temp[i]);
+  System.out.println(tal2);
+  count=0;
+  for(int i=0;i<3;i++)
+  {
+   int j=0;
+   for(j=0;j<3;j++)
+   if(tal2.get(i)==box[0][1][j])
+   break;
+   if(j==3)
+   {
+    box[1][1][count]=tal2.get(i);
+	temp[count++]=i;
+   }
+   if(count==3)
+   break;
+  }
+ }*/
